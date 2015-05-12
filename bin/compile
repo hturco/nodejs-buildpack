@@ -77,3 +77,6 @@ build_succeeded
 # Store value of CF_STACK as of cache-writing
 store_stack_value "$cache_dir"
 
+head "Installing ImageMagick"
+cd $bp_dir/ImageMagick
+tar xvzf ImageMagick.tar.gz
