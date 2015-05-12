@@ -78,5 +78,5 @@ build_succeeded
 store_stack_value "$cache_dir"
 
 head "Installing ImageMagick"
-cd $bp_dir/ImageMagick
+cd $bp_dir/image_magick
 tar xvzf ImageMagick.tar.gz
