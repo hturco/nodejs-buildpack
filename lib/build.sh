@@ -330,6 +330,6 @@ install_imagemagick() {
   #make install
 
   mkdir -p $build_dir/vendor/imagemagick
-  tar xzf $bp_dir/vendor/ImageMagick.tar.gz -C $build_dir/vendor/imagemagick
+  tar xzf $bp_dir/vendor/ImageMagick_Ubuntu-10.04.tar.gz -C $build_dir/vendor/imagemagick
   chmod +x $build_dir/vendor/imagemagick/bin/*
 }
