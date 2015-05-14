@@ -196,8 +196,8 @@ write_profile() {
   info "Creating runtime environment"
   mkdir -p $build_dir/.profile.d
 # echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $build_dir/.profile.d/nodejs.sh
-  echo "export PATH=\"\$HOME/vendor/imagemagick/bin:\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $build_dir/.profile.d/nodejs.sh
-  echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/imagemagick/libs\";" >> $build_dir/.profile.d/nodejs.sh
+  echo "export PATH=\"\$HOME/vendor/imagemagick/usr/bin:\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\"" > $build_dir/.profile.d/nodejs.sh
+  echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/imagemagick/libs:\$HOME/vendor/imagemagick/usr/libs:\$LD_LIBRARY_PATH\";" >> $build_dir/.profile.d/nodejs.sh
   echo "export NODE_HOME=\"\$HOME/vendor/node\"" >> $build_dir/.profile.d/nodejs.sh
 }
 
@@ -320,7 +320,7 @@ write_user_cache() {
 }
 
 install_imagemagick() {
-  head "Installing ImageMagick"
+  info "Installing ImageMagick"
   
   #cd $bp_dir/image_magick
   #tar xvzf ImageMagick.tar.gz
@@ -331,5 +331,5 @@ install_imagemagick() {
 
   mkdir -p $build_dir/vendor/imagemagick
   tar xzf $bp_dir/vendor/ImageMagick_Ubuntu-10.04.tar.gz -C $build_dir/vendor/imagemagick
-  chmod +x $build_dir/vendor/imagemagick/bin/*
+  chmod +x $build_dir/vendor/imagemagick/usr/bin/*
 }
