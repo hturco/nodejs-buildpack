@@ -78,10 +78,11 @@ build_succeeded
 store_stack_value "$cache_dir"
 
 head "Installing ImageMagick"
-cd $bp_dir/image_magick
-tar xvzf ImageMagick.tar.gz
-cd ImageMagick-6.9.1-2
-./configure --without-magick-plus-plus --without-perl --with-apple-font-dir=none --with-dejavu-font-dir= none --with-gs-font-dir= none --with-windows-font-dir= none --prefix=$build_dir/vendor/imagemagick
-make
-make install
-find $build_dir/vendor/imagemagick
+#cd $bp_dir/image_magick
+#tar xvzf ImageMagick.tar.gz
+#cd ImageMagick-6.9.1-2
+#./configure --without-magick-plus-plus --without-perl --with-apple-font-dir=none --with-dejavu-font-dir= none --with-gs-font-dir= none --with-windows-font-dir= none --prefix=$build_dir/vendor/imagemagick
+#make
+#make install
+
+tar xzf $bp_dir/vendor/ImageMagick.tar.gz -C $build_dir/vendor/
